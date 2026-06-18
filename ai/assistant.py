@@ -1,6 +1,6 @@
 from ai.gemini_client import GeminiClient
 
-API_KEY = "YOUR_GEMINI_API_KEY"
+API_KEY = "API"
 
 gemini = GeminiClient(API_KEY)
 
