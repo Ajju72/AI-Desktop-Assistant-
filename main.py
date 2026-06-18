@@ -1,3 +1,4 @@
+from ai.assistant import process_query
 import sys
 from PyQt6.QtWidgets import (
     QApplication,
@@ -47,3 +48,21 @@ if __name__ == "__main__":
     window.show()
 
     sys.exit(app.exec())
+
+def send_message(self):
+    user_text = self.input_box.text()
+
+    if not user_text:
+        return
+
+    self.chat_area.append(
+        f"You: {user_text}"
+    )
+
+    response = process_query(user_text)
+
+    self.chat_area.append(
+        f"Assistant: {response}"
+    )
+
+    self.input_box.clear()
