@@ -1,0 +1,12 @@
+PyQt6
+google-generativeai
+SpeechRecognition
+pyttsx3
+PyAutoGUI
+psutil
+python-dotenv
+requests
+pywhatkit
+Pillow
+opencv-python
+pyperclip
