@@ -1,0 +1,9 @@
+import platform
+
+def system_info():
+
+    return {
+        "OS": platform.system(),
+        "Version": platform.version(),
+        "Processor": platform.processor()
+    }
