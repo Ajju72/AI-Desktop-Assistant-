@@ -1,4 +1,6 @@
 from ai.assistant import process_query
+from voice.speech_to_text import listen
+from voice.text_to_speech import speak
 import sys
 from PyQt6.QtWidgets import (
     QApplication,
@@ -49,6 +51,12 @@ if __name__ == "__main__":
 
     sys.exit(app.exec())
 
+def voice_input(self):
+    text = listen()
+
+    if text:
+        self.input_box.setText(text)
+
 def send_message(self):
     user_text = self.input_box.text()
 
@@ -66,3 +74,10 @@ def send_message(self):
     )
 
     self.input_box.clear()
+
+self.voice_button = QPushButton("🎤 Voice")
+layout.addWidget(self.voice_button)
+
+self.voice_button.clicked.connect(
+    self.voice_input
+)
