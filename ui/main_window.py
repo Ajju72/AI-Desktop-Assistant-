@@ -5,6 +5,7 @@ from PyQt6.QtWidgets import (
     QLineEdit,
     QPushButton
 )
+from database.db_manager import DatabaseManager
 
 class MainWindow(QWidget):
     def __init__(self):
@@ -30,3 +31,4 @@ class MainWindow(QWidget):
         layout.addWidget(self.send_button)
 
         self.setLayout(layout)
+        
